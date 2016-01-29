@@ -70,7 +70,7 @@ return $firebaseAuth(usersRef);
  
  $scope.signupEmail = function(){  
  
-    var ref = new Firebase("https://test-123-1.firebaseio.com");
+    var ref = new Firebase("https://test-123-2.firebaseio.com");
    
     ref.createUser({
       email    : $scope.data.email,
@@ -86,7 +86,7 @@ return $firebaseAuth(usersRef);
  
   $scope.loginEmail = function(){
  
-    var ref = new Firebase("https://test-123-1.firebaseio.com");
+    var ref = new Firebase("https://test-123-2.firebaseio.com");
    
     ref.authWithPassword({
       email    : $scope.data.email,
@@ -113,7 +113,7 @@ return $firebaseAuth(usersRef);
     });
 };*/
 
-  var ref = new Firebase("https://test-123-1.firebaseio.com");
+  var ref = new Firebase("https://test-123-2.firebaseio.com");
  
  
   if(ionic.Platform.isWebView()){
