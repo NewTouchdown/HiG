@@ -1,4 +1,12 @@
 {
-  "name": "myAppTest",
-  "app_id": "a8c5e1b7"
+  "name": "ionic-login",
+  "app_id": "df9dec11",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
 }
