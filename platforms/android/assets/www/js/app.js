@@ -70,7 +70,7 @@ return $firebaseAuth(usersRef);
  
  $scope.signupEmail = function(){  
  
-    var ref = new Firebase("https://test-123-1.firebaseio.com");
+    var ref = new Firebase("https://test-123-2.firebaseio.com");
    
     ref.createUser({
       email    : $scope.data.email,
@@ -80,13 +80,14 @@ return $firebaseAuth(usersRef);
         console.log("Error creating user:", error);
       } else {
         console.log("Successfully created user account with uid:", userData.uid);
+        window.location.href='/www/templates/success.html';
       }
     });
   };
  
   $scope.loginEmail = function(){
  
-    var ref = new Firebase("https://test-123-1.firebaseio.com");
+    var ref = new Firebase("https://test-123-2.firebaseio.com");
    
     ref.authWithPassword({
       email    : $scope.data.email,
@@ -96,6 +97,7 @@ return $firebaseAuth(usersRef);
         console.log("Login Failed!", error);
       } else {
         console.log("Authenticated successfully with payload:", authData);
+        window.location.href='/www/templates/success.html';
       }
     }); 
   };
@@ -113,7 +115,7 @@ return $firebaseAuth(usersRef);
     });
 };*/
 
-  var ref = new Firebase("https://test-123-1.firebaseio.com");
+  var ref = new Firebase("https://test-123-2.firebaseio.com");
  
  
   if(ionic.Platform.isWebView()){
@@ -142,6 +144,7 @@ return $firebaseAuth(usersRef);
         console.log("Login Failed!", error);
       } else {
         console.log("Authenticated successfully with payload:", authData);
+        window.location.href='/www/templates/success.html';
       }
     });
  

@@ -40,6 +40,11 @@ angular.module('starter', ['ionic','firebase', 'ngCordova'])
     url: '/signin',
     templateUrl: 'templates/signin.html',
     controller: 'LoginCtrl'
+  })
+  .state('success', {
+    url: '/success',
+    templateUrl: 'templates/success.html',
+    controller: 'LoginCtrl'
   });
  
   $urlRouterProvider.otherwise("/");
@@ -80,6 +85,7 @@ return $firebaseAuth(usersRef);
         console.log("Error creating user:", error);
       } else {
         console.log("Successfully created user account with uid:", userData.uid);
+        window.location.href='#/success';
       }
     });
   };
@@ -96,6 +102,7 @@ return $firebaseAuth(usersRef);
         console.log("Login Failed!", error);
       } else {
         console.log("Authenticated successfully with payload:", authData);
+        window.location.href='/www/templates/success.html';
       }
     }); 
   };
@@ -142,6 +149,7 @@ return $firebaseAuth(usersRef);
         console.log("Login Failed!", error);
       } else {
         console.log("Authenticated successfully with payload:", authData);
+        window.location.href='/www/templates/success.html';
       }
     });
  
